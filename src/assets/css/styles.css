@@ -87,3 +87,36 @@ nav ul li a {
     text-decoration: none;
     color: #FCA311;
 }
+/* Adjust the layout of the columns */
+.cols {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 70px; /* Increase the gap between columns */
+}
+
+.column {
+    flex: 1 1 45%; /* Each column takes up 45% of the width, with some space between */
+    padding: 10px;
+    box-sizing: border-box; /* Ensures padding doesn’t affect width */
+}
+
+/* Fix for the school and GPA alignment */
+.school-gpa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0; /* Remove extra padding inside the row */
+    gap: 10px; /* Add a small gap between the school and GPA */
+}
+
+
+.school-gpa .school {
+    font-weight: bold;
+    color: #fff; /* Matches the main text color */
+}
+
+.school-gpa .gpa {
+    font-style: italic;
+    color: #EFBD6B; /* Matches the heading color for consistency */
+}
