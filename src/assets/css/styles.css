@@ -120,10 +120,10 @@ nav ul li a {
     font-style: italic;
     color: #EFBD6B; /* Matches the heading color for consistency */
 }
-.about-me h2 {
+/* .about-me h2 {
     display: flex;
     justify-content: center;
-}
+} */
 .bio-headshot {
     display: flex;
     flex-wrap: wrap; /* Ensures content wraps on smaller screens */
@@ -135,4 +135,16 @@ nav ul li a {
 .bio {
     max-width: 600px; /* Limits the width of the bio for better readability */
     text-align: justify; /* Ensures the bio text is justified */
+}
+.headshot img {
+    /* width: 20vw; The image will take 20% of the viewport width */
+     max-width: 500px;
+    height: auto; /* Maintain the aspect ratio */
+    margin: 0 30px;
+    border-radius: 10%;
+}
+
+.bio p {
+    line-height: 1.8;
+    margin-bottom: 20px;
 }
