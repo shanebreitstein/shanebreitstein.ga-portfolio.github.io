@@ -1,9 +1,10 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', serif;
     margin: 0;
     padding: 0;
     background-color: #14213D;
     color: #333;
+    
 }
 
 header {
@@ -11,10 +12,12 @@ header {
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
+    /* color: #FCA311; */
 }
 header h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
     margin: 0;
+
 }
 
 header h2 {
@@ -23,25 +26,41 @@ header h2 {
     margin: 5px 0 20px;
 } 
 nav {
-    margin: 20px 0;
+    margin: 30px 0;
 }
+
 main {
     margin: 0 10%;
     color: #fff;
+    min-height: 80vh;
     /* background-color: #e5e5e5; */
 }
 main h2{
     color: #EFBD6B;
 }
-nav a {
-    color: #ffffff;
+nav ul li {
+     padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+nav ul li a {
+    font-size: 1.5rem;
     text-decoration: none;
-    margin: 0 15px;
+    
     font-weight: bold;
+    text-decoration: none;
+    color: #14213D;
+    padding: 20px 20px;
+    background-color: #EFBD6B;
+    border-radius: 5px;
+}
+nav ul li a.current {
+    background-color: #8f7140;
 }
 
+
 nav a:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    background-color: #f7deb5;
 }
 
 .container {
@@ -58,7 +77,7 @@ nav a:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.footer {
+footer {
     text-align: center;
     padding: 10px 0;
     background: #35424a;
@@ -83,10 +102,7 @@ nav ul li:last-child {
     margin-right: 0;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #FCA311;
-}
+
 /* Adjust the layout of the columns */
 .cols {
     display: flex;
@@ -147,4 +163,23 @@ nav ul li a {
 .bio p {
     line-height: 1.8;
     margin-bottom: 20px;
+}
+ h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+@media (max-width: 965px) {
+    nav ul {
+        flex-direction: column; /* Stack the nav items vertically */
+        align-items: center; /* Center the items */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add spacing between the stacked items */
+    }
+
+    nav ul li a {
+        font-size: 1.2rem; /* Reduce font size for smaller screens */
+        padding: 10px 15px; /* Reduce padding to fit smaller screens */
+    }
 }
