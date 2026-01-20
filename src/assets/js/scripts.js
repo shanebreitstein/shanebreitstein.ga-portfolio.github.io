@@ -1,17 +1,17 @@
-// This file contains JavaScript code for interactivity on the portfolio website.
+// Array of headshot image paths
+const headshots = [
+    "../assets/imgs/headshot1.jpeg",
+    "../assets/imgs/headshot2.jpeg"
+];
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll('nav a');
+let currentIndex = 0; // Start with the first image
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            targetElement.scrollIntoView({ behavior: 'smooth' });
-        });
-    });
+// Function to change the headshot
+function cycleHeadshot() {
+    const headshotImg = document.getElementById("headshot");
+    currentIndex = (currentIndex + 1) % headshots.length; // Increment index and loop back to 0
+    headshotImg.src = headshots[currentIndex];
+}
 
-    // Add any additional interactivity or animations here
-});
+// Change the headshot every 5 seconds
+setInterval(cycleHeadshot, 5000);

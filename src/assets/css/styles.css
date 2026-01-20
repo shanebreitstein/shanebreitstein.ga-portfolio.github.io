@@ -154,7 +154,7 @@ nav ul li:last-child {
 }
 .headshot img {
     /* width: 20vw; The image will take 20% of the viewport width */
-     max-width: 500px;
+    max-width: 500px;
     height: auto; /* Maintain the aspect ratio */
     margin: 0 30px;
     border-radius: 10%;
@@ -182,4 +182,80 @@ nav ul li:last-child {
         font-size: 1.2rem; /* Reduce font size for smaller screens */
         padding: 10px 15px; /* Reduce padding to fit smaller screens */
     }
+}
+
+table {
+  border-collapse:separate;
+  /* border: 2px solid rgb(200,200,200); */
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+td, th {
+  /* border: 1px solid rgb(190,190,190); */
+  padding: 10px 10px;
+  margin: 20px;
+}
+
+th {
+  background-color: rgb(235,235,235);
+  border-radius: 10px 10px 0px 0px;
+  color:#8f7140;
+  
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-child(even) td {
+  background-color: rgb(5,5,5);
+}
+
+tr:nth-child(odd) td {
+  background-color: rgb(31,31,31);
+}
+
+caption {
+  padding: 10px;
+}
+.course-table {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.course-table .course-table-row {
+    padding: 5px 5px 0px 5px;
+    margin: 5px 5px 0px 5px;
+}
+.course:last-child {
+    border-radius: 0 0 10px 10px;
+}
+.table-title {
+    color:#EFBD6B;
+    background-color: #0A111F;
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 0px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+.course {
+    background-color: #111;
+    text-align: center;
+    padding: 10px;
+    padding-top: 15px;
+    color:#f7deb5
+    
+}
+p.course {
+    /* padding:0; */
+    margin: 0;
+}
+.course-table-row .course:nth-child(even) {
+    background-color: #111;
+}
+.course-table-row .course:nth-child(odd) {
+    background-color: #151515;
 }
