@@ -6,8 +6,8 @@
     <title>Engineering Projects</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-
-</head>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
 <body>
     <header>
         <h1>Engineering Projects</h1>
@@ -26,6 +26,10 @@
             <h2>Polyphonic Digital Synthesizer</h2>
             <p>Demo Video HERE</p>
             <p>Scrollable code section</p>
+        <pre><code id ="code-block"class="language-cpp">
+
+        </code></pre>
+</div>
             <p>Images of PCB in KiCAD</p>
             <p>I built this digital synthesizer inspired by the Roland Juno 60 Synthesizer. Based on the Teensy 4.1 microcontroller, this device </p>
         </section>
@@ -37,5 +41,20 @@
     <footer>
         <p>&copy; 2026 Shane Breitstein All rights reserved.</p>
     </footer>
+    <script>
+    // Fetch the code from the external file
+    fetch('../assets/code/synth_code_v2.txt')
+        .then(response => response.text()) // Read the file as text
+        .then(code => {
+            // Insert the code into the <code> block
+            document.getElementById('code-block').textContent = code;
+        })
+        .catch(error => console.error('Error loading code:', error));
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+ <script>
+    hljs.highlightAll();
+ </script>
+
 </body>
 </html>

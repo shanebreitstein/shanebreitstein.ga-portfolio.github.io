@@ -108,7 +108,7 @@ nav ul li:last-child {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 70px; /* Increase the gap between columns */
+    gap: 50px; /* Increase the gap between columns */
 }
 
 .column {
@@ -155,9 +155,13 @@ nav ul li:last-child {
 .headshot img {
     /* width: 20vw; The image will take 20% of the viewport width */
     max-width: 500px;
+    width: auto;
     height: auto; /* Maintain the aspect ratio */
     margin: 0 30px;
     border-radius: 10%;
+}
+.headshot {
+    max-width: 100%;
 }
 
 .bio p {
@@ -246,7 +250,7 @@ caption {
     text-align: center;
     padding: 10px;
     padding-top: 15px;
-    color:#f7deb5
+    color:#fff;
     
 }
 p.course {
@@ -258,4 +262,46 @@ p.course {
 }
 .course-table-row .course:nth-child(odd) {
     background-color: #151515;
+}
+
+.paper {
+    color:#EFBD6B;
+}
+
+.skills-container .skills-title {
+    color:#EFBD6B;
+    background-color: #0A111F;
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 10px 10px 0 0;
+     margin-bottom: 0; 
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.skills-container p {
+    margin: 0px;
+    background-color: #111;
+    text-align: center;
+    padding: 10px;
+    padding-top: 15px;
+    color:#fff;
+}
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.skills-container p:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
+pre, code {
+  overflow-x: auto; /* Enables horizontal scrolling */
+}
+
+pre {
+  max-height: 500px; /* Optional: Sets a maximum height for vertical scrolling */
+  overflow-y: auto;  /* Optional: Enables vertical scrolling if content exceeds max-height */
+  padding: 15px;
+  background-color: #f5f5f5; /* Optional: Match this to your chosen Prism theme background */
 }
