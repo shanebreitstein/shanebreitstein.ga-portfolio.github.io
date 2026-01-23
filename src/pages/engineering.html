@@ -48,6 +48,7 @@
         .then(code => {
             // Insert the code into the <code> block
             document.getElementById('code-block').textContent = code;
+            hljs.highlightElement(document.getElementById('code-block'));
         })
         .catch(error => console.error('Error loading code:', error));
 </script>
