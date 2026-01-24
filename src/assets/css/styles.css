@@ -208,7 +208,7 @@ th {
   
 }
 
-td {
+/* td {
   text-align: center;
 }
 
@@ -218,7 +218,7 @@ tr:nth-child(even) td {
 
 tr:nth-child(odd) td {
   background-color: rgb(31,31,31);
-}
+} */
 
 caption {
   padding: 10px;
@@ -296,13 +296,62 @@ p.course {
 }
 
 .scrollable-code {
-    max-height: 300px; /* Set the maximum height of the code block */
-    overflow-y: auto; /* Enable vertical scrolling */
-    background-color: #0A111F; /* Light gray background for better readability */
-    border: 1px solid #ddd; /* Optional: Add a border around the code block */
-    padding: 10px; /* Add padding inside the code block */
-    border-radius: 5px; /* Optional: Round the corners */
-    font-family: 'Courier New', Courier, monospace; /* Use a monospace font */
-    font-size: 0.9rem; /* Adjust font size for readability */
-    white-space: pre; /* Preserve whitespace */
+    height: 500px;
+    width: 1000px;
+    overflow-y: auto; 
+    /* background-color: #0A111F;  */
+    border-radius: 5px; 
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 0.9rem;
+    border: solid 1px black;
+    margin: 0;
+    padding: 0;
+    resize:both;
+    max-height: 1000px;
+    min-width: 75px;
+    overflow-x: auto;
+}
+
+code {
+
+    white-space: pre-wrap;
+    overflow: auto;
+}
+.hljs-ln-code {
+    padding-left: 10px;
+}
+.hljs-ln td.hljs-ln-code {
+	padding: 0;
+	padding-left: 10px;
+}
+.hljs-ln td.hljs-ln-numbers {
+    border-right: solid black 1px;
+    text-align: center;
+    padding: 0 10px;
+}
+tr:nth-child(even) {
+    background-color:#0A111F
+} 
+tr:nth-child(odd) {
+    background-color: #090f1c;
+}
+code.hljs {
+    background-color: #14213D;
+}
+code td.hljs-ln-code {
+    width: 1000px;
+}
+.video-code {
+    display:flex;
+    gap: 30px;
+}
+.video-code video {
+    width: auto;
+}
+
+.skill-group .skills:nth-child(even) {
+    background-color: #111;
+}
+.skill-group .skills:nth-child(odd) {
+    background-color: #151515;
 }
